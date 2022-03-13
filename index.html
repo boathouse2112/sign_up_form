@@ -14,13 +14,57 @@
             <img src="resources/hero_image.jpg">
         </div>
         <div id="content">
-            <div class="section">
-                <p>This is not a real online service! 
-                    You know you need something like this in your life to help you realize your deepest dreams. 
-                    Sign up now to get started.
+            <div id="copy_section">
+                <div>
+                    <p>
+                        This is not a real online service!
+                        You know you need something like this in your life to help you realize your deepest dreams.
+                    </p>
+                    <p>
+                        Sign up <em>now</em> to get started.
+                    </p>
+                </div>
+                <p>
+                    You <em>know</em> you want to.
                 </p>
-                <p></p>
             </div>
+            <form>
+                <div id="input_section">
+                    <h2>Let's do this!</h2>
+                    <div id="form_inputs">
+                        <div class="formInput">
+                            <label for="firstName">FIRST NAME</label>
+                            <input type="text" id="firstName">
+                        </div>
+                        <div class="formInput">
+                            <label for="lastName">LAST NAME</label>
+                            <input type="text" id="lastName">
+                        </div>
+                        <div class="formInput">
+                            <label for="email">EMAIL</label>
+                            <input type="email" id="email">
+                        </div>
+                        <div class="formInput">
+                            <label for="phoneNumber">PHONE NUMBER</label>
+                            <input type="tel" id="phoneNumber">
+                        </div>
+                        <div class="formInput">
+                            <label for="password">PASSWORD</label>
+                            <input id="password" type="password" minlength="6" >
+                        </div>
+                        <div class="formInput">
+                            <label for="confirmPassword">CONFIRM PASSWORD</label>
+                            <input type="password" id="confirmPassword">
+                        </div>
+                    </div>
+                </div>
+                <div id="submit_section">
+                    <button id="submit_button" type="submit">Create Account</button>
+                    <p>
+                        Already have an account? <a href="#">Log in</a>
+                    </p>
+                </div>
+            </form>
         </div>
     </div>
 </body>

@@ -2,11 +2,13 @@
 
 $font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
+
 $grey: #516567;
+$darkGrey: #181f20;
 $teal: #35CE8D;
 $brown: #6F2A11;
 $orange: #BB4F21;
-$white: #E3E9E9;
+$offWhite: #E3E9E9;
 
 @font-face {
   font-family: "Irish";
@@ -14,7 +16,35 @@ $white: #E3E9E9;
 }
 
 body {
+  background-color: $offWhite;
   font-family: $font-stack;
+  color: $darkGrey;
+}
+
+button, input {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+a {
+  color: $orange;
+  text-decoration: none;
+}
+
+a:visited {
+  color: $brown;
+}
+
+em {
+  font-style: italic;
 }
 
 #container {
@@ -24,13 +54,13 @@ body {
 }
 
 #hero {
-  width: 33%;
+  width: 40%;
   font-family: Irish, $font-stack;
 }
 
 #hero_text {
   position: absolute;
-  top: 27vh;
+  top: 25vh;
 
   width: inherit;
   height: 10vh;
@@ -38,7 +68,7 @@ body {
   background-color: rgba($brown, 0.4);
 
   font-size: 4vw;
-  color: $white;
+  color: $offWhite;
   line-height: 11vh;
   text-align: center;
 }
@@ -50,5 +80,112 @@ body {
 }
 
 #content {
-  width: 66%;
+  width: 60%;
+}
+
+#copy_section {
+  height: 33vh;
+  max-width: 620px;
+  padding: 13vh 40px 0 30px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+}
+
+#copy_section div > p:first-child {
+  margin: 0 0 0.3rem 0;
+}
+
+#copy_section p {
+  transform: scale(1, 1.2);
+
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.3rem;
+}
+
+#input_section {
+  height: 35vh;
+  padding: 1.5vh 30px 3vh 30px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+
+  box-shadow: 2px 3px 5px rgba($grey, 0.4);
+  background-color: #ffffff;
+}
+
+#input_section h2 {
+  flex: 0 1 auto;
+
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+#form_inputs {
+  flex: 1 1 auto;
+  max-width: 550px;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(10px, 1fr));
+  grid-template-rows: repeat(3, minmax(10px, 1fr));
+  row-gap: 5px;
+  column-gap: 40px;
+}
+
+.formInput {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.formInput label {
+  font-size: 14px;
+  color: $grey;
+}
+
+.formInput input {
+  height: 4vh;
+  padding: 4px 0 3px 4px;
+
+  border: 1px solid rgba($grey, .2);
+  border-radius: 5px;
+}
+
+.formInput input:focus {
+  outline: 1px solid rgba($teal, .5);
+  box-shadow: 2px 3px 5px rgba($grey, 0.3);
+}
+
+.formInput input:invalid {
+  outline: 1px solid rgba($orange, 0.4);
+  box-shadow: 2px 3px 5px rgba($grey, 0.4);
+}
+
+#submit_section {
+  padding: 40px 0 0 30px;
+}
+
+#submit_button {
+  width: 180px;
+  height: 40px;
+  margin: 0 0 25px 0;
+  border: none;
+  border-radius: 5px;
+
+  box-shadow: 2px 3px 5px rgba($grey, .2);
+  cursor: pointer;
+  background-color: $orange;
+  color: $offWhite;
+}
+
+#submit_section p {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+#submit_section a {
+  font-weight: 700;
 }
